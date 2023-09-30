@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 import './Login.css';
 
-const Login = () => {
+function Login() {
   // State to manage user input
   const [formData, setFormData] = useState({
     username: '',
@@ -19,7 +19,7 @@ const Login = () => {
     });
   };
 
-  // Handle form submission
+
   const handleSubmit = (event) => {
     event.preventDefault();
 
@@ -40,10 +40,9 @@ const Login = () => {
             name="username"
             value={formData.username}
             onChange={handleInputChange}
-            required
-          />
-        
-        
+            required />
+
+
           <label htmlFor="password">Password:</label>
           <input
             type="password"
@@ -51,10 +50,9 @@ const Login = () => {
             name="password"
             value={formData.password}
             onChange={handleInputChange}
-            required
-          />
-        
-       
+            required />
+
+
           <label htmlFor="email">Email:</label>
           <input
             type="text"
@@ -62,17 +60,16 @@ const Login = () => {
             name="email"
             value={formData.email}
             onChange={handleInputChange}
-            required
-          />
+            required />
 
           <p className="Waz-account">Don't you have an account??</p>
 
           <Link to="/register" className="reg">
             Register
           </Link>
-          s
 
-          <Link to="/forgotpass" className="reg">
+
+          <Link to="/forgotpass" className="forg">
             ForgotPassword
           </Link>
 
@@ -81,6 +78,6 @@ const Login = () => {
       </form>
     </div>
   );
-};
+}
 
 export default Login;

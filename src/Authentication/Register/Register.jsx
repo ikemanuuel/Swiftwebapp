@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from "react-router-dom";
-
+import './Register.css';
 
 const Register = () => {
-  // State to manage user registration input
   const [formData, setFormData] = useState({
     username: '',
     password: '',
@@ -32,7 +31,7 @@ const Register = () => {
     <div className="Registerni-pinakauna">
       <form onSubmit={handleRegistration}>
         <div className="Register-form-group">
-          <text className="Registerngatxt">Register</text>
+        <text className="Registerngatxt">Register</text>
           <label htmlFor="username">Username:</label>
           <input
             type="text"
@@ -65,7 +64,7 @@ const Register = () => {
 
           <text className="naakay-account">Already have an account?</text>
 
-          <Link to="login" className="reg">
+          <Link to="/" className="logsbalik">
             Login
           </Link>
 
