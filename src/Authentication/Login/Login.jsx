@@ -70,6 +70,7 @@ const Login = () => {
           <Link to="/register" className="reg">
             Register
           </Link>
+          s
 
           <Link to="/forgotpass" className="reg">
             ForgotPassword
