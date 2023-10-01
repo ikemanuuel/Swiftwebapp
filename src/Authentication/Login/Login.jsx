@@ -1,16 +1,17 @@
 import React, { useState } from 'react';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from 'react-router-dom'; // Import useNavigate
+
 import './Login.css';
 
 function Login() {
-  // State to manage user input
+  const navigate = useNavigate(); // Initialize navigation function
+
   const [formData, setFormData] = useState({
     username: '',
     password: '',
     email: '',
   });
 
-  // Handle form input changes
   const handleInputChange = (event) => {
     const { name, value } = event.target;
     setFormData({
@@ -19,20 +20,19 @@ function Login() {
     });
   };
 
-
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    // TODO: Perform authentication logic here
-    // For simplicity, let's just log the submitted data for now
-    console.log('Submitted Data:', formData);
-  };
+    // Perform your login logic here using the formData state
 
+    // After successful login, navigate to another page
+    navigate('/Dash'); // Use navigate instead of history.push
+  };
   return (
-    <div className="login-pinakauna">
+    <div className="login-background login-pinakauna"> 
       <form onSubmit={handleSubmit}>
         <div className="form-group">
-          <text className="loginngatxt">Login</text>
+          <p className="loginngatxt">Login</p>
           <label htmlFor="username">Username:</label>
           <input
             type="text"
@@ -42,7 +42,6 @@ function Login() {
             onChange={handleInputChange}
             required />
 
-
           <label htmlFor="password">Password:</label>
           <input
             type="password"
@@ -51,7 +50,6 @@ function Login() {
             value={formData.password}
             onChange={handleInputChange}
             required />
-
 
           <label htmlFor="email">Email:</label>
           <input
@@ -63,11 +61,10 @@ function Login() {
             required />
 
           <p className="Waz-account">Don't you have an account??</p>
-
+          
           <Link to="/register" className="reg">
             Register
           </Link>
-
 
           <Link to="/forgotpass" className="forg">
             ForgotPassword

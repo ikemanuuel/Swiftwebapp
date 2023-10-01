@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from 'react-router-dom'; // Import useNavigate
 import './Register.css';
 
 const Register = () => {
+  const navigate = useNavigate(); // Initialize navigation function
+
   const [formData, setFormData] = useState({
     username: '',
     password: '',
     email: '',
   });
 
-  // Handle form input changes
   const handleInputChange = (event) => {
     const { name, value } = event.target;
     setFormData({
@@ -18,20 +19,23 @@ const Register = () => {
     });
   };
 
-  // Handle registration form submission
   const handleRegistration = (event) => {
     event.preventDefault();
 
     // TODO: Perform registration logic here
     // For simplicity, let's just log the submitted data for now
     console.log('Registration Data:', formData);
+
+    // After successful registration, navigate to another page (e.g., login page)
+    navigate('/'); // Use navigate instead of a direct link
   };
+
 
   return (
     <div className="Registerni-pinakauna">
       <form onSubmit={handleRegistration}>
         <div className="Register-form-group">
-        <text className="Registerngatxt">Register</text>
+        <p className="Registerngatxt">Register</p>
           <label htmlFor="username">Username:</label>
           <input
             type="text"
@@ -62,7 +66,7 @@ const Register = () => {
             required
           />
 
-          <text className="naakay-account">Already have an account?</text>
+          <p className="naakay-account">Already have an account?</p>
 
           <Link to="/" className="logsbalik">
             Login
