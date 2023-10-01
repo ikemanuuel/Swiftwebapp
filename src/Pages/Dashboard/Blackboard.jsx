@@ -1,14 +1,49 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 const Blackboard = () => {
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
   const token = localStorage.getItem("token");
   const navigate = useNavigate();
 
-  if (!token) {
-    // Redirect to the login page if token is not present
-    navigate("/");
-    return null; // Return null to avoid rendering the rest of the component
+  useEffect(() => {
+    if (!token) {
+      navigate("/");
+      return;
+    }
+
+    const fetchData = async () => {
+      try {
+        const response = await fetch(
+          "http://localhost:8000/api/v1/accounts/dashboard/",
+          {
+            headers: {
+              Authorization: `Token ${token}`,
+            },
+          }
+        );
+
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+
+        setLoading(false);
+      } catch (error) {
+        setLoading(false);
+        setError(error);
+      }
+    };
+
+    fetchData();
+  }, [token, navigate]);
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    return <div>Error: {error.message}</div>;
   }
 
   return (

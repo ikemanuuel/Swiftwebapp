@@ -18,6 +18,16 @@
   display:flex ;
 }
 
+.saregisterlogoustp{
+  justify-content: center;
+  align-items: center;
+  margin-left: 80px; /* Adjust the margin as needed */
+  width: 100px; /* Adjust the width as needed */
+  height: auto;
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
 .Register-form-group {
     display: flex;
   flex-direction:column ;
