@@ -6,8 +6,12 @@
 html,
 body {
   height: 100%;
-  overflow: hidden;
+  overflow: auto;
   /* Prevent body from scrolling */
+}
+
+.header-container{
+  flex-direction: column;
 }
 
 .dashboard-container {

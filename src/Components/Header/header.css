@@ -1,0 +1,20 @@
+/* header.css */
+
+/* header.css */
+
+/* header.css */
+
+.header {
+    background-color: #060E57;
+    color: white; /* Set text color to white for contrast */
+    padding: 10px; /* Add some padding for spacing */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+   /* background-image: url('../../Images/LogoUstp.png'); /* Replace with your image path */
+    /*background-size: 37px; /* Set the size (e.g., 50px) */
+   /* background-repeat: no-repeat; /* Prevent image repetition */
+   /* background-position: 70px center; /* Move the image 45px to the right */
+    font-size: 20px;
+  }
+  

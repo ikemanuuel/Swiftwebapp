@@ -9,15 +9,16 @@ import AddCategories from '../screens/AddCategories';
 import Item from '../screens/Item';
 import Profile from '../screens/Profile';
 import Sidebar from "../../Components/Sidebar/Sidebar";
-import Navbar from "../../Components/Navbar/Navbar";
+import Header from "../../Components/Header/Header";
 import './dashboard.css';
 
 
 function Dashboard() {
   return (
-      
-    <div className="dashboard-container">
-      <Navbar /> {/* Add the Navbar component at the top */}
+
+    <div className="header-container">
+    <Header /> {/* Add the Navbar component at the top */}
+    <div className="dashboard-container">  
       <Sidebar />
       <div className="dashboard-background">
       <div className="dashcontainer">
@@ -35,6 +36,7 @@ function Dashboard() {
           </Routes>
         </div>
       </div>
+    </div>
     </div>
     </div>
   );
