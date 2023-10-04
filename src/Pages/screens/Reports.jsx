@@ -10,10 +10,10 @@ function Reports() {
   const formattedDate = `${year}-${month}-${day}`;
 
   return (
-    <div className="home-container">
-      <div className="home-content">
-        <h1 className="home-title">Reports</h1>
-          <p className="home-date">{formattedDate}</p>
+    <div className="repoorts-container">
+      <div className="reports-content">
+        <h1 className="reports-title">Reports</h1>
+          <p className="reports-date">{formattedDate}</p>
       </div>
     </div>
   );

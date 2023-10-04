@@ -10,10 +10,10 @@ function Item() {
   const formattedDate = `${year}-${month}-${day}`;
 
   return (
-    <div className="home-container">
-      <div className="home-content">
-        <h1 className="home-title">Item</h1>
-          <p className="home-date">{formattedDate}</p>
+    <div className="Item-container">
+      <div className="Item-content">
+        <h1 className="Item-title">Item</h1>
+          <p className="Item-date">{formattedDate}</p>
       </div>
     </div>
   );

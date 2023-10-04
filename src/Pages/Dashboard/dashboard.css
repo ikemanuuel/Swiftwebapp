@@ -19,7 +19,7 @@ body {
 .dashboard-background {
   flex-grow: 1;
   /* Expand to fill available width */
-  background-color: #D9D9D9;
+  background-color: #666666;
   /* Background color */
 }
 
@@ -31,6 +31,6 @@ body {
   height: 100%;
   max-width: 100%;
   overflow: auto;
-  font-size: 24px;
+  font-size: 15px;
   text-align: left;
 }

@@ -10,10 +10,10 @@ function Categories() {
   const formattedDate = `${year}-${month}-${day}`;
 
   return (
-    <div className="home-container">
-      <div className="home-content">
-        <h1 className="home-title">Categories</h1>
-          <p className="home-date">{formattedDate}</p>
+    <div className="categories-container">
+      <div className="categories-content">
+        <h1 className="categories-title">Categories</h1>
+          <p className="categories-date">{formattedDate}</p>
       </div>
     </div>
   );

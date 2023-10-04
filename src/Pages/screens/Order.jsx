@@ -10,10 +10,10 @@ function Order() {
   const formattedDate = `${year}-${month}-${day}`;
 
   return (
-    <div className="home-container">
-      <div className="home-content">
-        <h1 className="home-title">Order</h1>
-          <p className="home-date">{formattedDate}</p>
+    <div className="order-container">
+      <div className="order-content">
+        <h1 className="order-title">Order</h1>
+          
       </div>
     </div>
   );

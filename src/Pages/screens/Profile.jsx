@@ -10,10 +10,9 @@ function Profile() {
   const formattedDate = `${year}-${month}-${day}`;
 
   return (
-    <div className="home-container">
-      <div className="home-content">
-        <h1 className="home-title">Profile</h1>
-          <p className="home-date">{formattedDate}</p>
+    <div className="profile-container">
+      <div className="profile-content">
+        <h1 className="profile-title">Profile</h1>
       </div>
     </div>
   );

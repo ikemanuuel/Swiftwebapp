@@ -10,10 +10,9 @@ function Rental() {
   const formattedDate = `${year}-${month}-${day}`;
 
   return (
-    <div className="home-container">
-      <div className="home-content">
-        <h1 className="home-title">Rental</h1>
-          <p className="home-date">{formattedDate}</p>
+    <div className="rental-container">
+      <div className="rental-content">
+        <h1 className="rental-title">Rental</h1>
       </div>
     </div>
   );
