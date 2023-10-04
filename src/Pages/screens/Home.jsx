@@ -9,6 +9,7 @@ function Home() {
   const formattedDate = `${year}-${month}-${day}`;
 
   return (
+    
     <div className="home-container">
       <div className="home-header">
         <h1 className="home-title">Dashboard</h1>
@@ -48,7 +49,8 @@ function Home() {
       </div>
       <div className="dashboard-footer">
       </div>
-    </div>
+      </div>
+    
   );
 }
 
