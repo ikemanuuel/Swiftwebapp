@@ -26,7 +26,7 @@ function Login() {
     // Perform your login logic here using the formData state
 
     // After successful login, navigate to another page
-    navigate('/dash'); // Use navigate instead of history.push
+    navigate('/dashboard'); // Use navigate instead of history.push
   };
   return (
     <div className="login-background login-pinakauna"> 

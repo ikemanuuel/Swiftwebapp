@@ -1,0 +1,64 @@
+.addcategories-container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding-right: 50px;
+}
+
+.addcategories-title {
+    font-size: 50px;
+    font-weight: bolder;
+}
+
+.addcategories-content {
+    margin-left: 100px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.addcategories-date {
+    font-weight: bolder;
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #003366;
+    border: 5px solid white;
+    padding: 10px;
+  }
+  
+  .navbar-logo {
+    width: 10%;
+  }
+  
+  .navbar-logo img {
+    width: 100%;
+  }
+  
+  .navbar-text {
+    width: 70%;
+    color: white;
+    text-align: center;
+  }
+  
+  .navbar-title {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .navbar-subtitle {
+    font-size: 18px;
+  }
+  
+  .navbar-emblem {
+    width: 10%;
+  }
+  
+  .navbar-emblem img {
+    width: 100%;
+  }
+  
