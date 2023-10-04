@@ -1,0 +1,83 @@
+.order-container {
+    padding: 20px;
+  }
+  
+  .order-content {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  .order-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .table-container {
+    margin-top: 20px;
+  }
+  
+  .table-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .saorderrequestngabutton, .pangsortbuttonsaorder {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .search-bar {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    flex-grow: 1;
+    margin-left: 10px;
+    align-items: center;
+  }
+  
+  .order-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .order-table th, .order-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .order-table th {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .order-table td input[type="checkbox"] {
+    margin-right: 5px;
+  }
+  
+  .cancelbuttonparasaorderpage, .updatebuttonparasaorderpage {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .removebuttonsaorderpage {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
