@@ -1,0 +1,52 @@
+.backgroundcategories {
+    background-color: #f0f0f0;
+    padding: 20px;
+  }
+
+.categoriescontaineroh {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    padding-bottom: 10px;
+    
+
+}
+  
+  .categoriescontentoh {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  table th,
+  table td {
+    font-size: 17px;
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  table th {
+    background-color: #f0f0f0;
+    font-weight: bold;
+  }
+  
+  table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  

@@ -21,7 +21,7 @@
 .saregisterlogoustp{
   justify-content: center;
   align-items: center;
-  margin-left: 80px; /* Adjust the margin as needed */
+  margin-left: 115px; /* Adjust the margin as needed */
   width: 100px; /* Adjust the width as needed */
   height: auto;
   margin-top: 0px;
@@ -29,19 +29,43 @@
 }
 
 .Register-form-group {
-    display: flex;
-  flex-direction:column ;
-  align-items: left;
+  flex-direction: column; /* Change to 'row' if you want a row layout */
+  justify-content: center;
+  align-items: center;
   background: rgba(15, 15, 15, 0.7);
   padding: 20px;
-  width: 120%;
+  width: 110%;
   color: #fcfcfc;
   border-radius: 10px;
+  margin-bottom: 5; /* You can use '0' directly */
 }
 
 .Registerngatxt{
     font-size: 36px;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
     text-align: center; 
+}
+
+/* Add a class to initially hide the message */
+.password-do-not-match {
+  display: none;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+/* Style for the error state (red) */
+.password-do-not-match.error {
+  color: red;
+  display: block; /* Show the message when in the error state */
+}
+
+/* Style for the success state (green) */
+.password-do-not-match.success {
+  color: green;
+  display: block; /* Show the message when in the success state */
+}
+
+.form-field {
+  margin-bottom: 0px;
 }

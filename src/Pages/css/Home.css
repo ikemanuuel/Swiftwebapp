@@ -32,13 +32,13 @@
     padding: 200px;
 }
 
-  .category-tables {
+  .home-tables {
     display: flex;
     justify-content: space-around;
     width: 100%;
   }
   
-  .category-table {
+  .home-table {
     background-color: #b3b0b0;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -48,26 +48,26 @@
     margin-bottom: 20px;
   }
   
-  .category-name {
+  .home-name {
     font-size: 20px;
     margin: 0;
     margin-bottom: 10px;
   }
   
-  .table {
+  .hometable {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
   
-  .table-row {
+  .hometable-row {
     display: flex;
     justify-content: space-between;
     width: 100%;
     margin: 5px 0;
   }
   
-  .table-cell {
+  .hometable-cell {
     flex: 1;
     font-size: 16px;
   }
