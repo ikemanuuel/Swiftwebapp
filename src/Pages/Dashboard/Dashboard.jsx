@@ -10,6 +10,7 @@ import Item from '../screens/Item';
 import Profile from '../screens/Profile';
 import Sidebar from "../../Components/Sidebar/Sidebar";
 import Header from "../../Components/Header/Header";
+import Listofuser from "../../Pages/screens/Listofuser"
 import './dashboard.css';
 
 
@@ -33,6 +34,7 @@ function Dashboard() {
             <Route path="addcategories" element={<AddCategories />} />
             <Route path="item" element={<Item />} />
             <Route path="profile" element={<Profile />} />
+            <Route path="Listofuser" element={<Listofuser />} />
           </Routes>
         </div>
       </div>

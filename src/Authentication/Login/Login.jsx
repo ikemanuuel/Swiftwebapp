@@ -68,17 +68,10 @@ function Login() {
             required
           />
 
-          <label htmlFor="email">Email:</label>
-          <input
-            type="text"
-            id="email"
-            name="email"
-            value={formData.email}
-            onChange={handleInputChange}
-            required
-          />
-
+          
+        
           <div className="remember-me">
+          <label htmlFor="rememberMe">Remember Me</label>
             <input
               type="checkbox"
               id="rememberMe"
@@ -86,10 +79,10 @@ function Login() {
               checked={rememberMe}
               onChange={handleRememberMeChange}
             />
-            <label htmlFor="rememberMe">Remember Me</label>
+            
           </div>
 
-          <p className="Waz-account">Don't you have an account??</p>
+          
 
           <Link to="/register" className="reg">
             Register

@@ -31,13 +31,13 @@ function Order() {
               {/* Add rows of data here */}
               <tr>
                 <td>
-                  <input type="checkbox" /> 1
+                  <input type="checkbox" /> 
                 </td>
-                <td>2023-10-10</td>
-                <td>User123</td>
-                <td>RO123</td>
-                <td>Credit Card</td>
-                <td>Shipped</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
                 <td>
                   <button className="cancelbuttonparasaorderpage">Cancel</button>
                   <button className="updatebuttonparasaorderpage">Update</button>

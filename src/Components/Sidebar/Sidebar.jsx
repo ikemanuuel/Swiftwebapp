@@ -8,7 +8,7 @@ import {
   FaFolderPlus,
   FaFolderOpen,
   FaUserCircle } from 'react-icons/fa';
-import { BiLogOut } from 'react-icons/bi';
+import { BiLogOut,BiSolidUserDetail } from 'react-icons/bi';
 import { NavLink } from 'react-router-dom';
 import './sidebar.css';
 
@@ -53,6 +53,11 @@ const Sidebar = ({ children }) => {
       path: '/dashboard/profile',
       name: 'Profile',
       icon: <FaUserCircle />,
+    },
+    {
+      path: '/dashboard/Listofuser',
+      name: 'List of Users',
+      icon: <BiSolidUserDetail />,
     },
     {
       path: '/',

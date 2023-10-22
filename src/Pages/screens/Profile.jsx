@@ -1,18 +1,64 @@
-import React from "react";
-import { FaCalendarAlt } from "react-icons/fa";
-
+// src/components/Profile.js
+import React, { useState } from "react";
+import "../css/Profile.css";
 
 function Profile() {
-  const currentDate = new Date();
-  const year = currentDate.getFullYear();
-  const month = (currentDate.getMonth() + 1).toString().padStart(2, '0');
-  const day = currentDate.getDate().toString().padStart(2, '0');
-  const formattedDate = `${year}-${month}-${day}`;
+  // Define state variables for user information
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [userType, setUserType] = useState("");
+  const [email, setEmail] = useState("");
+
+  // Function to handle form submission
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // You can do something with the user information here (e.g., send it to a server)
+    console.log("User Information:", { username, password, userType, email });
+  };
 
   return (
-    <div className="profile-container">
+    <div className="profilecontainer">
       <div className="profile-content">
-        <h1 className="profile-title">Profile</h1>
+        <h1 className="profile-title">User Profile</h1>
+        <form onSubmit={handleSubmit}>
+          <div className="form-username">
+            <label htmlFor="username">Username:</label>
+            <input
+              type="text"
+              id="username"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+            />
+          </div>
+          <div className="form-password">
+            <label htmlFor="password">Password:</label>
+            <input
+              type="password"
+              id="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </div>
+          <div className="form-type">
+            <label htmlFor="userType">User Type:</label>
+            <input
+              type="text"
+              id="userType"
+              value={userType}
+              onChange={(e) => setUserType(e.target.value)}
+            />
+          </div>
+          <div className="form-type">
+            <label htmlFor="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </div>
+          <button type="submit">Save</button>
+        </form>
       </div>
     </div>
   );

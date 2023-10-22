@@ -1,0 +1,86 @@
+.Rental-container {
+    padding: 20px;
+  }
+  
+  .rental-content {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  .rental-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .rentaltable-container {
+    margin-top: 20px;
+  }
+  
+  .rentaltable-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .sarentalrequestngabutton,
+  .rentaltbuttonsaorder {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .rentalsearch-bar {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    flex-grow: 1;
+    margin-left: 10px;
+    align-items: center;
+  }
+  
+  .rentalorder-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .rentalorder-table th,
+  .rentalorder-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .rentalorder-table th {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .rentalorder-table td input[type="rentalcheckbox"] {
+    margin-right: 5px;
+  }
+  
+  .cancelbuttonparasaorderpage,
+  .updatebuttonparasaorderpage {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .rentalremovebuttonsaorderpage {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  

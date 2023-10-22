@@ -85,3 +85,13 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
+.remember-me {
+
+  align-items: center;
+}
+
+.remember-me input[type="checkbox"] {
+  margin-right: 5px;
+}
+
