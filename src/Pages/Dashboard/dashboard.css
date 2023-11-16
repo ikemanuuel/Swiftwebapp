@@ -10,7 +10,7 @@ body {
   /* Prevent body from scrolling */
 }
 
-.header-container{
+.dashboardheader{
   flex-direction: column;
 }
 

@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import Images from './../../Images/Logo.png';
 import './Login.css';
+import { loginUser } from '../../Components/api/api';
+import { message } from 'antd';
 
 function Login() {
   const navigate = useNavigate();
@@ -9,7 +11,6 @@ function Login() {
   const [formData, setFormData] = useState({
     username: '',
     password: '',
-    email: '',
   });
 
   const [rememberMe, setRememberMe] = useState(false); // State for "Remember Me" checkbox
@@ -28,6 +29,8 @@ function Login() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    loginUser(formData, navigate)
+
 
     // Perform your login logic here using the formData state
 
@@ -36,8 +39,7 @@ function Login() {
       // Save user data for remembering (e.g., using cookies or local storage)
     }
 
-    // Navigate to another page
-    navigate('/dashboard');
+    
   };
 
   return (

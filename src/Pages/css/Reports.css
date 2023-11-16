@@ -1,0 +1,62 @@
+/* Reports.css */
+
+.reportcontentni {
+    padding: 20px;
+  }
+  
+  .Report-containerni {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 10px;
+  }
+    
+  .searchbarorder {
+    margin-bottom: 10px;
+  }
+  
+  .reporttable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .reporttable th, .reporttable td {
+    border: 1px solid #0a0a0a;
+    padding: 12px; 
+    text-align: left;
+  }
+  
+  .reporttable th {
+    background-color: #f2f2f2;
+  }
+  
+  .order-title {
+    color: #333;
+    margin-bottom: 10px; 
+  }
+  
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  
+  .dropdown3 {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .dropdown2 {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+  }
+
+  .print-buttoninreports {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 5%;
+    text-decoration: underline;
+  }
+  

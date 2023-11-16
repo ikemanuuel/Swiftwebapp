@@ -4,7 +4,12 @@ import "../css/Order.css";
 
 function Order() {
   return (
+    
     <div className="order-container">
+        <div className="searchbarorder">
+          <input type="text" placeholder="Search..." />
+        </div>
+
       <div className="order-content">
         <h1 className="order-title">Order</h1>
         
@@ -12,7 +17,7 @@ function Order() {
           <div className="table-toolbar">
             <button className="saorderrequestngabutton">Order Request</button>
             <button className="pangsortbuttonsaorder">Sort</button>
-            <input type="text" placeholder="Search" className="search-bar" />
+            
           </div>
           
           <table className="order-table">
@@ -42,7 +47,7 @@ function Order() {
                   <button className="cancelbuttonparasaorderpage">Cancel</button>
                   <button className="updatebuttonparasaorderpage">Update</button>
                 </td>
-              </tr>
+              </tr> 
               {/* Add more rows as needed */}
             </tbody>
           </table>

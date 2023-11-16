@@ -83,7 +83,6 @@ function Item() {
       <div>
         <div className="search-bar">
           <input type="text" placeholder="Search..." />
-          <button>Search</button>
         </div>
 
         <button className="modal-button" onClick={openModal}>

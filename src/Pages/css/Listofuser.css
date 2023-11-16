@@ -9,27 +9,27 @@
 }
 
 .list-table {
-    width: 100%;
-    border-collapse: collapse;
-    border: 1px solid #ccc;
-    margin-top: 20px;
-  }
-  
-  .list-table td {
-    border: 1px solid #ccc;
-    padding: 8px;
-    text-align: center;
-    font-size: 12px;
-  }
-  
-  .list-table th {
-    background-color: #f2f2f2;
-    font-weight: bold;
-    border: 1px solid #ccc;
-    padding: 8px;
-    text-align: center;
-    font-size: 17px;
-  }
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #333; /* Use a darker gray color for the border */
+  margin-top: 20px;
+}
+
+.list-table td {
+  border: 1px solid #333; /* Use a darker gray color for the border */
+  padding: 8px;
+  text-align: center;
+  font-size: 12px;
+}
+
+.list-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+  border: 1px solid #333; /* Use a darker gray color for the border */
+  padding: 8px;
+  text-align: center;
+  font-size: 17px;
+}
   
   .salistuserbutton {
     padding: 5px 10px;

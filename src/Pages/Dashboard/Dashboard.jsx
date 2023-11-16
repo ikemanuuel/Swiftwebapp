@@ -17,7 +17,7 @@ import './dashboard.css';
 function Dashboard() {
   return (
 
-    <div className="header-container">
+    <div className="dashboardheader">
     <Header /> {/* Add the Navbar component at the top */}
     <div className="dashboard-container">  
       <Sidebar />

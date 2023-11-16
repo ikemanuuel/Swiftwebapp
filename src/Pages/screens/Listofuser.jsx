@@ -1,31 +1,33 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import "../css/Listofuser.css";
+import { acceptAccountRequest, activateAccount, deactivateAccount, declineAccountRequest, fetchAccountRequest, fetchRegisteredAccount } from '../../Components/api/api';
 
 const UserList = () => {
-  const [accountRequests, setAccountRequests] = useState([
-    { id: 1, username: 'user1', email: 'user1@example.com', role: 'Role A' },
-    { id: 2, username: 'user2', email: 'user2@example.com', role: 'Role B' },
-    // Add more account requests here
-  ]);
+  const [accountRequests, setAccountRequests] = useState([]);
 
-  const [registeredAccounts, setRegisteredAccounts] = useState([
-    { id: 1, username: 'user3', email: 'user3@example.com', role: 'Role A', status: 'Active' },
-    { id: 2, username: 'user4', email: 'user4@example.com', role: 'Role B', status: 'Inactive' },
-    // Add more registered accounts here
-  ]);
+  const [registeredAccounts, setRegisteredAccounts] = useState([]);
 
-  // Handle accept and decline actions for account requests
+  useEffect(() => {
+    fetchAccountRequest(setAccountRequests)
+  }, []);
+
+  useEffect(() => {
+    fetchRegisteredAccount(setRegisteredAccounts)
+  }, []);
+
+  
   const handleAccept = (id) => {
-    // Implement your logic here to accept the account request with the given ID
+    acceptAccountRequest(id)
   };
 
   const handleDecline = (id) => {
-    // Implement your logic here to decline the account request with the given ID
+   declineAccountRequest(id)
   };
-
-  // Handle remove action for registered accounts
-  const handleRemove = (id) => {
-    // Implement your logic here to remove the registered account with the given ID
+  const handleActivate = (id) => {
+    activateAccount(id)
+  };
+  const handleDeactivate = (id) => {
+    deactivateAccount(id)
   };
 
   return (
@@ -42,11 +44,11 @@ const UserList = () => {
                 </tr>
                 </thead>
                 <tbody>
-                {accountRequests.map((user) => (
+                {accountRequests.map((user, index) => (
                     <tr key={user.id}>
                     <td>{user.username}</td>
                     <td>{user.email}</td>
-                    <td>{user.role}</td>
+                    <td>{user.user_type}</td>
                     <td>
                         <button className='salistuserbutton' onClick={() => handleAccept(user.id)}>Accept</button>
                         <button className='salistuserdeclinebutton' onClick={() => handleDecline(user.id)}>Decline</button>
@@ -73,10 +75,11 @@ const UserList = () => {
                     <tr key={user.id}>
                     <td>{user.username}</td>
                     <td>{user.email}</td>
-                    <td>{user.role}</td>
-                    <td>{user.status}</td>
+                    <td>{user.user_type}</td>
+                    <td>{user.is_active ? 'Active' : 'Inactive'}</td>
                     <td>
-                        <button className='btremove' onClick={() => handleRemove(user.id)}>Remove</button>
+                        <button className='salistuserbutton' onClick={() => handleActivate(user.id)}>Activate</button>
+                        <button className='btremove' onClick={() => handleDeactivate(user.id)}>Deactivate</button>
                     </td>
                     </tr>
                 ))}
