@@ -11,6 +11,7 @@ import Profile from '../screens/Profile';
 import Sidebar from "../../Components/Sidebar/Sidebar";
 import Header from "../../Components/Header/Header";
 import Listofuser from "../../Pages/screens/Listofuser"
+import Sales from "../../Pages/screens/Sales"
 import './dashboard.css';
 
 
@@ -35,6 +36,7 @@ function Dashboard() {
             <Route path="item" element={<Item />} />
             <Route path="profile" element={<Profile />} />
             <Route path="Listofuser" element={<Listofuser />} />
+            <Route path= "sales" element={<Sales/>} />
           </Routes>
         </div>
       </div>

@@ -1,54 +1,144 @@
-import React from "react";
+import React, { useState } from "react";
 import "../css/Rental.css";
 
-
 function Rental() {
+  const [showModal, setShowModal] = useState(false);
+  const [selectedStatus, setSelectedStatus] = useState("Paid");
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+  };
+
+  const handleStatusChange = (status) => {
+    console.log("Selected status changed:", status);
+    setSelectedStatus(status);
+  };
+  
+  const handleSave = () => {
+    console.log("Save button clicked");
+    console.log("Saved status:", selectedStatus);
+    handleCloseModal();
+  };
   return (
     <div className="Rental-container">
+      <div className="rentalsearch-bar">
+        <input type="text" placeholder="Search..." />
+      </div>
       <div className="rental-content">
         <h1 className="rental-title">Rental</h1>
-        
-        <div className="retnaltable-container">
-          <div className="rentaltable-toolbar">
-            <button className="sarentalrequestngabutton">Order Request</button>
-            <button className="rentaltbuttonsaorder">Sort</button>
-            <input type="text" placeholder="Search" className="rentalsearch-bar" />
+
+        {/* New table with 13 columns */}
+        <table className="rental-table">
+          <thead>
+            <tr>
+              <th>Rental ID</th>
+              <th>Username</th>
+              <th>Item Name</th>
+              <th>Category ID</th>
+              <th>Rental Price</th>
+              <th>Rental Deposit</th>
+              <th>Remarks</th>
+              <th>Payment Type</th>
+              <th>Date Claimed</th>
+              <th>Date Return</th>
+              <th>Due Date</th>
+              <th>Status</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            {/* Add rows of data here */}
+            <tr>
+              <td>556</td>
+              <td>Username1</td>
+              <td>Item1</td>
+              <td>1</td>
+              <td>300</td>
+              <td>500</td>
+              <td>Remarks1</td>
+              <td>Payment1</td>
+              <td>06/05/2023</td>
+              <td>6/05/2023</td>
+              <td>6/05/2023</td>
+              <td>Paid</td>
+              <td
+                className="edit-link"
+                onClick={() => setShowModal(true)}
+                style={{ textDecoration: 'underline', cursor: 'pointer' }}
+              >
+                Edit
+              </td>
+            </tr>
+
+            <tr>
+              <td>145</td>
+              <td>Username2</td>
+              <td>Item2</td>
+              <td>1</td>
+              <td>300</td>
+              <td>500</td>
+              <td>Remarks2</td>
+              <td>Payment2</td>
+              <td>06/05/2023</td>
+              <td>6/05/2023</td>
+              <td>6/05/2023</td>
+              <td>Paid</td>
+              <td
+                className="edit-link"
+                onClick={() => setShowModal(true)}
+                style={{ textDecoration: 'underline', cursor: 'pointer' }}
+              >
+                Edit
+              </td>
+            </tr>
+
+            {/* Add more rows as needed */}
+          </tbody>
+        </table>
+
+        {showModal && (
+          <div className="modalrental">
+            <div className="modal-contentrental">
+              <span className="closerental" onClick={handleCloseModal}>&times;</span>
+              <h2>Edit Rental Status</h2>
+              <div className="rentaledit">
+                <form>
+                  <label className="radio-label">
+                    <input
+                      type="radio"
+                      name="status"
+                      value="Paid"
+                      checked={selectedStatus === "Paid"}
+                      onChange={() => handleStatusChange("Paid")}
+                    />
+                    Paid
+                  </label>
+                  <label className="radio-label">
+                    <input
+                      type="radio"
+                      name="status"
+                      value="Unpaid"
+                      checked={selectedStatus === "Unpaid"}
+                      onChange={() => handleStatusChange("Unpaid")}
+                    />
+                    Unpaid
+                  </label>
+                  {/* Add more radio buttons for other status options as needed */}
+                </form>
+                <div className="buttonrentaledit">
+                  <button className="edit-rental-cancel" onClick={handleCloseModal}>
+                    Cancel
+                  </button>
+                  <button className="edit-rental-save" onClick={handleSave}>
+                    Save
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
-          
-          <table className="rentalorder-table">
-            <thead>
-              <tr>
-                <th>Order Id</th>
-                <th>Order date</th>
-                <th>Username</th>
-                <th>Request Order Id</th>
-                <th>Payment type</th>
-                <th>Status</th>
-                <th>Action</th>
-              </tr>
-            </thead>
-            <tbody>
-              {/* Add rows of data here */}
-              <tr>
-                <td>
-                  <input type="rentalcheckbox" /> 
-                </td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>
-                  <button className="cancelbuttonparasaorderpage">Cancel</button>
-                  <button className="updatebuttonparasaorderpage">Update</button>
-                </td>
-              </tr>
-              {/* Add more rows as needed */}
-            </tbody>
-          </table>
-        </div>
-        
-        <button className="rentalremovebuttonsaorderpage">Remove</button>
+        )}
+
+        {/* Rest of your content */}
       </div>
     </div>
   );

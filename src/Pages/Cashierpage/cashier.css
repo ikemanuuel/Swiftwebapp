@@ -1,0 +1,40 @@
+* {
+    padding: 0;
+    margin: 0;
+  }
+  
+  html,
+  body {
+    height: 100%;
+    overflow: auto;
+    /* Prevent body from scrolling */
+  }
+  
+  .cashierheader{
+    flex-direction: column;
+  }
+  
+  .cash-container {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+  }
+  
+  .cashier-background {
+    flex-grow: 1;
+    /* Expand to fill available width */
+    background-color: #666666;
+    /* Background color */
+  }
+  
+  .cashier {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    height: 100%;
+    max-width: 100%;
+    overflow: auto;
+    font-size: 24px;
+    text-align: left;
+  }

@@ -17,26 +17,46 @@ export const registerUser = (formData) => {
 
 export const loginUser = (formData, navigate) => {
     api.post('api/v1/accounts/token/login', formData)
-    .then((response) => {
-        const token = response.data.auth_token
-        localStorage.setItem("token", token)
-
+      .then((response) => {
+        const token = response.data.auth_token;
+        localStorage.setItem("token", token);
+  
         api.get('api/v1/accounts/me', {
-           headers: {
+          headers: {
             Authorization: `Token ${token}`,
             "Content-Type": 'application/json'
-           } 
-        }).then((response)=> {
-            if(response.data.user_type === 'Admin') {
-                navigate('dashboard')
-            }
+          }
+        }).then((response) => {
+          const userType = response.data.user_type;
+  
+          // Redirect based on user type
+          switch (userType) {
+            case 'Admin':
+              navigate('/dashboard');
+              break;
+            case 'Cashier':
+              navigate('/cashdashboard');
+              break;
+            case 'AnotherUserType':
+              navigate('/another-user-type-dashboard');
+              break;
+            // Add more cases for additional user types
+  
+            default:
+              // Handle unexpected user types or scenarios
+              console.error("Unexpected user type:", userType);
+              break;
+          }
         })
+  
+      }).catch((error) => {
+        console.log(error);
+        // Handle login failure
+      });
+  };
+  
 
-        
-    }).catch((error)=>{
-        console.log(error)
-    })  
-}
+
 
 export const fetchAccountRequest = (setAccountRequests) => {
     const token = localStorage.getItem("token")

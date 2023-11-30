@@ -24,13 +24,16 @@
     margin-bottom: 10px;
   }
   
-  .saorderrequestngabutton, .pangsortbuttonsaorder {
+  .saorderrequestngabutton {
     background-color: #28a745;
     color: white;
     border: none;
     padding: 10px 15px;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
+    text-align: left;
+    margin: 10px;
+    width: auto; 
   }
   
   .searchbarorder {
@@ -69,24 +72,50 @@
     margin-right: 5px;
   }
   
-  .cancelbuttonparasaorderpage, .updatebuttonparasaorderpage {
-    background-color: #28a745;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
+  .cancelbuttonparasaorderpage,
+.updatebuttonparasaorderpage {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 15px;
+  display: inline-block; 
+  width: auto;
+}
   
-  .removebuttonsaorderpage {
-    background-color: #dc3545;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 10px;
-  }
+.removebuttonsaorderpage {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  width: auto;
+  display: flex;
+  justify-content: flex-end;
+}
 
-  
-  
+
+
+.dropdown-sortbuttonsaorder {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+.dropdown-sortbuttonsaorder button {
+    font-size: 50px;
+}
+
+.checkbox-header,
+.checkbox-cell {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-cell input {
+  margin-right: 5px;
+}
