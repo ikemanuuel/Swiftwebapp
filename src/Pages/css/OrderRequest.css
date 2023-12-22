@@ -1,0 +1,39 @@
+/* OrderRequest.css */
+
+.order-request-container {
+    margin: 20px;
+  }
+  
+  .order-request-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .table-container {
+    overflow-x: auto;
+  }
+  
+  .order-request-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  .order-request-table th, .order-request-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .order-request-table th {
+    background-color: #f2f2f2;
+  }
+  
+  .accept-button, .decline-button {
+    padding: 8px 12px;
+    margin-right: 5px;
+    cursor: pointer;
+  }
+  
+
+  

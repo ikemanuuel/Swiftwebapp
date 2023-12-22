@@ -4,6 +4,7 @@ import Login from './Authentication/Login/Login';
 import Register from './Authentication/Register/Register';
 import Dashboard from './Pages/Dashboard/Dashboard';
 import Cashdashboard from './Pages/Cashierpage/Cashdashboard';
+import OrderRequest from './Pages/screens/OrderRequest';
 
 
 
@@ -16,6 +17,7 @@ function App() {
             <Route path="/register" element={<Register />} />
             <Route path="/dashboard/*" element={<Dashboard />} />
             <Route path="/cashdashboard/*" element={<Cashdashboard />} />
+            <Route path="/orderrequest/*" element={<OrderRequest />} />
         </Routes>
       </div>
     </HashRouter>

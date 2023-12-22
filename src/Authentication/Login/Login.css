@@ -95,3 +95,8 @@ a:hover {
   margin-right: 5px;
 }
 
+.login {
+  margin-top: 0;
+  margin-bottom: 15px;
+  padding: 8px;
+}

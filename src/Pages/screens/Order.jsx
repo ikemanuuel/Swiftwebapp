@@ -1,7 +1,11 @@
+// Order.jsx
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom"; // Import useNavigate
 import "../css/Order.css";
 
 function Order() {
+  const navigate = useNavigate(); // Initialize useNavigate
+
   const [rows, setRows] = useState([
     { id: 1, date: "6/05/2023", username: "Pslamer", requestId: 111, type: "over the counter", status: "pending" },
     { id: 2, date: "6/05/2023", username: "Bon", requestId: 114, type: "over the counter", status: "pending" },
@@ -24,6 +28,11 @@ function Order() {
     setSelectedRows([]); // Clear selected rows after removal
   };
 
+  const handleOrderRequestClick = () => {
+    // Use navigate to go to the order request page
+    navigate("/OrderRequest");
+  };
+
   return (
     <div className="order-container">
       <div className="searchbarorder">
@@ -35,7 +44,10 @@ function Order() {
 
         <div className="table-container">
           <div className="table-toolbar">
-            <button className="saorderrequestngabutton">Order Request</button>
+            {/* Call the function when the button is clicked */}
+            <button className="saorderrequestngabutton" onClick={handleOrderRequestClick}>
+              Order Request
+            </button>
 
             {/* Updated Sort button to a dropdown */}
             <div className="dropdown-sortbuttonsaorder">
@@ -49,10 +61,7 @@ function Order() {
           </div>
 
           <div className="table-and-remove">
-            <button
-              className="removebuttonsaorderpage"
-              onClick={handleRemoveClick}
-            >
+            <button className="removebuttonsaorderpage" onClick={handleRemoveClick}>
               Remove
             </button>
 

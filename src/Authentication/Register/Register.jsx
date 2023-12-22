@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import './Register.css';
 import Images from './../../Images/Logo.png';
 import { registerUser } from '../../Components/api/api';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 const Register = () => {
   const navigate = useNavigate();
@@ -17,7 +18,8 @@ const Register = () => {
 
   const [passwordsMatch, setPasswordsMatch] = useState(false);
   const [showPassword, setShowPassword] = useState(false); // To toggle password visibility
-  const [message, setMessage] = useState('')
+  const [message, setMessage] = useState('');
+  const [isPasswordFocused, setIsPasswordFocused] = useState(false);
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -40,6 +42,14 @@ const Register = () => {
     setShowPassword(!showPassword);
   };
 
+  const handlePasswordFocus = () => {
+    setIsPasswordFocused(true);
+  };
+
+  const handlePasswordBlur = () => {
+    setIsPasswordFocused(false);
+  };
+
   const handleRegistration = (event) => {
     event.preventDefault();
 
@@ -58,17 +68,16 @@ const Register = () => {
     }
   };
 
-  const handleOnSubmit = ()=> {
-    
-      if (formData.password !== formData.confirmPassword) {
-        setMessage('Passwords do not match')
-      } else {
-        setMessage('Password match')
-      }
-    registerUser(formData)
-    
-    console.log(formData)
-  }
+  const handleOnSubmit = () => {
+    if (formData.password !== formData.confirmPassword) {
+      setMessage('Passwords do not match');
+    } else {
+      setMessage('Password match');
+    }
+    registerUser(formData);
+
+    console.log(formData);
+  };
 
   return (
     <div className="Registerni-pinakauna">
@@ -91,15 +100,24 @@ const Register = () => {
           </div>
           <div className="form-field">
             <label htmlFor="password">Password:</label>
-            <div className="password-input">
+            <div className={`password-input ${isPasswordFocused ? 'focused' : ''}`}>
               <input
                 type={showPassword ? 'text' : 'password'}
                 id="password"
                 name="password"
                 value={formData.password}
                 onChange={handleInputChange}
+                onFocus={handlePasswordFocus}
+                onBlur={handlePasswordBlur}
                 required
               />
+              <button className="showpassword" onClick={handleTogglePasswordVisibility}>
+                {showPassword ? (
+                  <i className="fas fa-eye-slash"></i>
+                ) : (
+                  <i className="fas fa-eye"></i>
+                )}
+              </button>
             </div>
           </div>
           <div className="form-field">
@@ -118,16 +136,19 @@ const Register = () => {
           <div className="form-field">
             <label htmlFor="confirmPassword">User Type:</label>
             <div className="password-input">
-              <select value={formData.user_type} onChange={(event) => {
-                setFormData((prevData)=> ({
-                  ...prevData, user_type: event.target.value
-                }))
-              }}>
+              <select
+                value={formData.user_type}
+                onChange={(event) => {
+                  setFormData((prevData) => ({
+                    ...prevData,
+                    user_type: event.target.value,
+                  }));
+                }}
+              >
                 <option>-------Select---------</option>
                 <option value="Cashier">Cashier</option>
                 <option value="Inventory Clerk">Inventory Clerk</option>
                 <option value="Inventory Sales">Inventory Sales</option>
-                
               </select>
             </div>
           </div>
@@ -143,7 +164,9 @@ const Register = () => {
             />
           </div>
           <p
-            className={`password-do-not-match ${message === "Passwords do not match" ? 'error' : 'success'}`}
+            className={`password-do-not-match ${
+              message === 'Passwords do not match' ? 'error' : 'success'
+            }`}
           >
             {message}
           </p>
@@ -151,14 +174,9 @@ const Register = () => {
           <Link to="/" className="logsbalik">
             Login
           </Link>
-          <button
-            type="button"
-            onClick={handleTogglePasswordVisibility}
-            className="password-visibility-toggle"
-          >
-            {showPassword ? 'Hide Password' : 'Show Password'}
+          <button className='register' onClick={handleOnSubmit} type="submit">
+            Register
           </button>
-          <button onClick={handleOnSubmit} type="submit">Register</button>
         </div>
       </form>
     </div>

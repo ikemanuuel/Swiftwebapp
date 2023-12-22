@@ -69,24 +69,10 @@ function Login() {
             onChange={handleInputChange}
             required
           />
+          <button className='login' type="submit">Login</button>
 
-          
-        
-          <div className="remember-me">
-          <label htmlFor="rememberMe">Remember Me</label>
-            <input
-              type="checkbox"
-              id="rememberMe"
-              name="rememberMe"
-              checked={rememberMe}
-              onChange={handleRememberMeChange}
-            />
-            
-          </div>
-
-          
-
-          <Link to="/register" className="reg">
+          <p className='forgotpass'>Don't have an account please click the </p>
+          <Link to="/register" className="reg"> 
             Register
           </Link>
 
@@ -96,7 +82,7 @@ function Login() {
           </Link>
          
 
-          <button type="submit">Login</button>
+          
         </div>
       </form>
     </div>

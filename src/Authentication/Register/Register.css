@@ -37,7 +37,7 @@
   width: 110%;
   color: #fcfcfc;
   border-radius: 10px;
-  margin-bottom: 5; /* You can use '0' directly */
+  margin-bottom: 0px; /* You can use '0' directly */
 }
 
 .Registerngatxt{
@@ -69,3 +69,17 @@
 .form-field {
   margin-bottom: 0px;
 }
+
+.showpassword {
+  background: none; /* Remove background color */
+  border: none; /* Remove border */
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  font-size: 13px;
+}
+
+.register{
+  padding: 10px;
+}
+

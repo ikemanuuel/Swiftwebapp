@@ -6,7 +6,7 @@ function Item() {
   const [items, setItems] = useState([]);
   const [categories, setCategories] = useState([]); // State to hold category data
   const [newItem, setNewItem] = useState({
-    category: "", // Use 'category' for the selected category
+    category: "", 
     item_name: "",
     size: "",
     price: "",
@@ -164,9 +164,15 @@ function Item() {
         <table>
           <thead>
             <tr>
-              <th>Item ID</th>
-              <th>Category</th>
+              <th>Item #</th>
+              <th>Category Name</th>
+              <th>Author</th>
+              <th>Tag</th>
               <th>Item Name</th>
+              <th>Size</th>
+              <th>Price</th>
+              <th>Quantity</th>
+              <th>Add/Remove</th>
               {/* Other table headers */}
             </tr>
           </thead>

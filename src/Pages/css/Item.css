@@ -89,7 +89,9 @@
   
   th, td {
     padding: 8px;
-    text-align: left;
+    text-align: center;
+
+
   }
   
   /* Style for form inputs */
