@@ -1,7 +1,10 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "../css/Rental.css";
 
 function Rental() {
+  const navigate = useNavigate();
+
   const [showModal, setShowModal] = useState(false);
   const [selectedStatus, setSelectedStatus] = useState("Paid");
 
@@ -19,15 +22,26 @@ function Rental() {
     console.log("Saved status:", selectedStatus);
     handleCloseModal();
   };
+
+  const handleOrderRequestClick = () => {
+    // Use navigate to go to the order request page
+    navigate("/RentalRequest");
+  };
+
   return (
     <div className="Rental-container">
       <div className="rentalsearch-bar">
         <input type="text" placeholder="Search..." />
       </div>
       <div className="rental-content">
+      
         <h1 className="rental-title">Rental</h1>
+        
+        <button className="rentalrequestngabutton" onClick={handleOrderRequestClick}>
+              Rental request
+      </button>
 
-        {/* New table with 13 columns */}
+      
         <table className="rental-table">
           <thead>
             <tr>

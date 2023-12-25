@@ -98,3 +98,16 @@
   color: #ebf5ed;
   
 }
+
+.rentalrequestngabutton{
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: left;
+    margin: 10px;
+    width: auto; 
+
+}

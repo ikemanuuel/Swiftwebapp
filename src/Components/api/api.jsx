@@ -4,7 +4,6 @@ const api = axios.create({
     baseURL: 'http://localhost:8000/'
 })
 
-
 export const registerUser = (formData) => {
     api.post('api/v1/accounts/user-create', formData)
     .then((response)=> {
@@ -38,7 +37,7 @@ export const loginUser = (formData, navigate) => {
               navigate('/cashdashboard');
               break;
             case 'AnotherUserType':
-              navigate('/another-user-type-dashboard');
+              navigate('/dashboard');
               break;
             // Add more cases for additional user types
   
