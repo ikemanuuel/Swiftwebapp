@@ -1,0 +1,113 @@
+.cashrental-container {
+  padding: 20px;
+}
+
+.rental-content {
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.rental-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: right;
+}
+
+.rentaltable-container {
+  margin-top: 20px;
+}
+
+.rentaltable-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.rentalrequestbutton {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.rental-content {
+  display: flex;
+  flex-wrap: wrap; 
+
+}
+
+.rentalsearch-bar {
+  text-align: center;
+  margin-bottom: 4%;
+  margin-top: 2%;
+}
+
+
+.rentalsearch-bar input {
+  width: 30%;
+}
+
+
+.rentalorder-table td input[type="rentalcheckbox"] {
+  margin-right: 5px;
+}
+
+
+/* Add this to your CSS */
+.modalrental {
+  margin-left: 35%;
+
+}
+
+.modal-contentrental {
+  background-color: #FAB417;;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.closerental {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.rentaledit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.radio-label {
+  margin-bottom: 10px;
+}
+
+.buttoneditrental {
+  margin-top: 5px;
+}
+
+.small-button {
+  margin-right: 10px;
+}
+
+.edit-rental-cancel{
+  color: #ebf5ed;
+  
+}
+
+.rentalrequestngabutton{
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: left;
+    margin: 10px;
+    width: auto; 
+
+}

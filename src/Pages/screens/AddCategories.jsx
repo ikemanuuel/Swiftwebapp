@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import "../css/AddCategories.css";
+import { addCategories } from '../../Components/api/api';
 
 const AddCategories = () => {
   const [formData, setFormData] = useState({
@@ -17,17 +18,7 @@ const AddCategories = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    axios.post('http://localhost:8000/api/v1/ecommerce/categories/', formData) // Update the URL
-      .then(response => {
-        alert('Category added successfully!');
-        setFormData({
-          category_name: '', // Reset the form field
-        });
-      })
-      .catch(error => {
-        console.log(error);
-        alert('Error adding category!');
-      });
+    addCategories(formData)
   };
 
   return (

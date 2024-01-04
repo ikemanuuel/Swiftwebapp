@@ -23,7 +23,7 @@
 }
 
 .cashtop_section {
-    background-image: url('../../Images/Edited.jpg');
+    background-image: url('/src/Images/Edited-removebg-preview.png');
     background-size: 200px;
     background-repeat: no-repeat;
     display: flex;

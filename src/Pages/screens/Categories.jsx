@@ -1,15 +1,14 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "../css/Categories.css";
+import { fetchCategories } from "../../Components/api/api";
 
 function Categories() {
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
     // Fetch the list of categories from your API
-    axios.get("http://localhost:8000/api/categories/").then((response) => {
-      setCategories(response.data);
-    });
+    fetchCategories(setCategories)
   }, []);
 
   return (

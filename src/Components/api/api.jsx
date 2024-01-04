@@ -148,3 +148,73 @@ export const deactivateAccount = (id) => {
         console.log(error)
     })
 }
+
+
+export const addCategories = (formData) => {
+    const token = localStorage.getItem("token")
+    axios.post('http://localhost:8000/api/v1/ecommerce/categories/', formData, {
+        headers: {
+            Authorization: `Token ${token}`,
+            "Content-Type": 'application/json'
+        } 
+    }) // Update the URL
+      .then(response => {
+        alert('Category added successfully!');
+        // setFormData({
+        //   category_name: '', // Reset the form field
+        // });
+      })
+      .catch(error => {
+        console.log(error);
+        alert('Error adding category!');
+      });
+}
+
+export const fetchCategories = (setCategories) => {
+    const token = localStorage.getItem("token")
+    axios.get("http://localhost:8000/api/v1/ecommerce/categories/", {
+        headers: {
+            Authorization: `Token ${token}`,
+            "Content-Type": 'application/json'
+           } 
+    }).then((response) => {
+      setCategories(response.data);
+    });
+}
+
+export const addItems = (newItem, setShowModal) => {
+    const token = localStorage.getItem("token")
+    axios
+      .post("http://localhost:8000/api/v1/ecommerce/items/", newItem, {
+        headers: {
+            Authorization: `Token ${token}`,
+            "Content-Type": 'application/json'
+        } 
+    })
+      .then((response) => {
+        alert('Item added successfully!');
+        window.location.reload()
+        setShowModal(false);
+      })
+      .catch((error) => {
+        console.error("Error adding item:", error); // Log the error message
+        alert('Error adding item! See the console for details.'); // Display a generic error message to the user
+      });
+}
+
+export const fetchItems = (setItems) => {
+    const token = localStorage.getItem("token")
+    axios
+      .get("http://localhost:8000/api/v1/ecommerce/items/", {
+        headers: {
+            Authorization: `Token ${token}`,
+            "Content-Type": 'application/json'
+        } 
+    }) // Replace with your backend API URL
+      .then((response) => {
+        setItems(response.data);
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+      });
+}

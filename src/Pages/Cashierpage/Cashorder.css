@@ -1,31 +1,41 @@
-.order-container {
-    padding: 20px;
-  }
+* { 
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box; 
+}
+
+.cashorder-container {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  padding-bottom: 10px;
+
+}
   
-  .order-content {
+  .cashorder-content {
     background-color: #f2f2f2;
     padding: 20px;
     border-radius: 10px;
+    margin-left: 150px;
   }
   
-  .order-title {
+  .cashorder-title {
     font-size: 24px;
     margin-bottom: 20px;
   }
   
-  .table-container {
+  .cashtable-container {
     margin-top: 20px;
   }
   
-  .table-toolbar {
+  .cashtable-toolbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 10px;
-
   }
   
-  .saorderrequestngabutton {
+  .cashsaorderrequestngabutton {
     background-color: #28a745;
     color: white;
     border: none;
@@ -37,44 +47,45 @@
     width: auto; 
   }
   
-  .searchbarorder {
+  .cashsearchbar {
     text-align: center;
     margin-bottom: 20px;
+
   }
   
-  .searchbarorder input[type="text"] {
+  .cashsearchbarorder input[type="text"] {
     padding: 8px;
     width: 20%;
     border: 1px solid #0a0a0a;
     border-radius: 10px;
-    margin-left: 4%;
+    margin-left: 45%;
     margin-bottom: 4%;
   }
   
 
 
-  .order-table {
+  .cashorder-table {
     width: 100%;
     border-collapse: collapse;
   }
   
-  .order-table th, .order-table td {
+  .cashorder-table th, .order-table td {
     border: 1px solid #ccc;
     padding: 10px;
     text-align: center;
   }
   
-  .order-table th {
+  .cashorder-table th {
     background-color: #007bff;
     color: white;
   }
   
-  .order-table td input[type="checkbox"] {
+  .cashorder-table td input[type="checkbox"] {
     margin-right: 5px;
   }
   
-  .cancelbuttonparasaorderpage,
-.updatebuttonparasaorderpage {
+  .cashcancelbuttonparasaorderpage,
+.cashupdatebuttonparasaorderpage {
   background-color: #28a745;
   color: white;
   border: none;
@@ -86,7 +97,7 @@
   width: auto;
 }
   
-.removebuttonsaorderpage {
+.cashremovebuttonsaorderpage {
   background-color: #dc3545;
   color: white;
   border: none;
@@ -101,22 +112,22 @@
 
 
 
-.dropdown-sortbuttonsaorder {
+.cashdropdown-sortbuttonsaorder {
     display: flex;
     justify-content: flex-end;
     margin-bottom: 20px;
 }
 
-.dropdown-sortbuttonsaorder button {
+.cashdropdown-sortbuttonsaorder button {
     font-size: 50px;
 }
 
-.checkbox-header,
-.checkbox-cell {
+.cashcheckbox-header,
+.cashcheckbox-cell {
   display: flex;
   align-items: center;
 }
 
-.checkbox-cell input {
+.cashcheckbox-cell input {
   margin-right: 5px;
 }

@@ -35,7 +35,7 @@ function OrderRequest() {
     // Assuming you want to navigate to the "/order" route on "Accept"
     if (action === "Accept") {
       // Navigate to the order page
-      navigate("/rental");
+      navigate("/dashboard/rental");
     }
   };
 

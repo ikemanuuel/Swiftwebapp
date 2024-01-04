@@ -2,7 +2,7 @@ import React from 'react';
 import { 
   FaClipboardList,
   FaGraduationCap, 
-  FaUserCircle } from 'react-icons/fa';
+  /*FaUserCircle*/ } from 'react-icons/fa';
 import { BiLogOut,} from 'react-icons/bi';
 import { NavLink } from 'react-router-dom';
 import './cashsidebar.css';
@@ -16,14 +16,9 @@ const Cashsidebar = ({ children }) => {
       icon: <FaClipboardList />, 
     },
     {
-      path: '/dashboard/rental',
+      path: '/cashdashboard/cashrental',
       name: 'Rental',
       icon: <FaGraduationCap />,
-    },
-    {
-      path: '/dashboard/profile',
-      name: 'Profile',
-      icon: <FaUserCircle />,
     },
     {
       path: '/',
